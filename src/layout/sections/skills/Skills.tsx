@@ -8,11 +8,11 @@ export const Skills = () => {
   return (
     <StyledSkills>
       <SectionTitle>My Skills</SectionTitle>
-      <FlexWrapper justify="center">
+      <FlexWrapper align="center" justify="center">
         <Skill
           iconId="codeSvg"
           title="html5"
-          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
+          description="Lorem ipsumаа dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
         />
         <Skill
           iconId="css"

@@ -1,25 +1,22 @@
-import React from 'react'
-import styled from 'styled-components'
+import styled from "styled-components";
+import { MenuItem } from "./MenuItem/MenuItem";
 
-export const  Menu = () => {
+export const Menu = (props: { menuItems: Array<string> }) => {
   return (
     <StyledMenu>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Works</a></li>
-            <li><a href="#">Testimony</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-      </StyledMenu>
-  )
-}
+      <ul>
+        {props.menuItems.map((item) => (
+          <MenuItem key={item} item={item} />
+        ))}
+      </ul>
+    </StyledMenu>
+  );
+};
 
 const StyledMenu = styled.nav`
-    ul {
-        display: flex;
-        gap: 10px;
-        list-style-type: none;
-    }
-`
-
+  ul {
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+  }
+`;
