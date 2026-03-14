@@ -1,22 +1,25 @@
 import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
 import { Menu } from "../../components/menu/Menu";
+import { Container } from "../../components/Container";
+import { FlexWrapper } from "../../components/FlexWrapper";
 
 const menuItems = ["Home", "Skills", "Works", "Testimony", "Contact"];
 
 export const Header = () => {
   return (
     <StyledHeader>
-      <Logo />
-      <Menu menuItems={menuItems} />
+      <Container>
+        <FlexWrapper justify="space-between" align='center'>
+          <Logo />
+          <Menu menuItems={menuItems} />
+        </FlexWrapper>
+      </Container>
     </StyledHeader>
   );
 };
 
 const StyledHeader = styled.header`
   background-color: tomato;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-inline: 20px;
 `;
