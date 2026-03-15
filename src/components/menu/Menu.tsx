@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MenuItem } from "./MenuItem/MenuItem";
+import { MenuItem } from "./menuItem/MenuItem";
 
 export const Menu = (props: { menuItems: Array<string> }) => {
   return (
