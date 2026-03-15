@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
    body {
     font-family: "Poppins", sans-serif;
     color: ${theme.colors.font};
+    line-height: 1.2;
    }
 
   a {
