@@ -1,31 +1,61 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
+import { FlexWrapper } from "../../../../components/FlexWrapper";
 
 type SkillPropsType = {
-    iconId: string;
-    title: string;
-    description: string;
-}
-
+  iconId: string;
+  title: string;
+  description: string;
+};
 
 export const Skill = (props: SkillPropsType) => {
   return (
     <StyledSkill>
-      <Icon iconId={props.iconId} />
-      <SkillTitle>{props.title}</SkillTitle>
-      <SkillText>
-        {props.description}
-      </SkillText>
+      <FlexWrapper direction="column" align="center">
+        <IconWrapper>
+          <Icon iconId={props.iconId} />
+        </IconWrapper>
+        <SkillTitle>{props.title}</SkillTitle>
+        <SkillText>{props.description}</SkillText>
+      </FlexWrapper>
     </StyledSkill>
   );
 };
 
 const StyledSkill = styled.div`
- width: 28%;
- background-color: #f4b9b9;
- margin: 5px;
- padding: 10px;
- `;
-const SkillTitle = styled.h3``;
-const SkillText = styled.p``;
+  width: 380px;
+  padding: 62px 20px 40px;
+`;
+const IconWrapper = styled.div`
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    aspect-ratio: 1;
+    background: rgba(255, 255, 255, 0.1);
+    rotate: 45deg;
+    transform: translate(-50%, -50%);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+  }
+`;
+
+const SkillTitle = styled.h3`
+  margin: 70px 0 15px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+`;
+const SkillText = styled.p`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+`;

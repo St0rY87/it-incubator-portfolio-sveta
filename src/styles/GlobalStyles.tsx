@@ -33,6 +33,11 @@ export const GlobalStyles = createGlobalStyle`
     background-color: unset;
     border: none;
   }
+
+  section {
+    padding-block: 100px;
+  }
+
   section:nth-of-type(odd) {
     background-color: ${theme.colors.primaryBg}
   }
