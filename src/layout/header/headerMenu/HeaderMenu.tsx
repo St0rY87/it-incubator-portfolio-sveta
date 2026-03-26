@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { HeaderMenuItem } from "./headerMenuItem/HeaderMenuItem";
+import { theme } from "../../../styles/Theme";
 
 
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
@@ -20,6 +21,9 @@ const StyledHeaderMenu = styled.nav`
   ul {
     display: flex;
     justify-content: space-between;
-    list-style-type: none;
+  }
+
+  @media ${theme.media.tablet} {
+    display: none;
   }
 `;
